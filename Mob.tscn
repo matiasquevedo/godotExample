@@ -30,7 +30,13 @@ animations = [ {
 radius = 36.5805
 height = 29.6831
 
+<<<<<<< HEAD
 [node name="Mob" type="RigidBody2D"]
+=======
+[node name="Mob" type="RigidBody2D" groups=[
+"mobs",
+]]
+>>>>>>> 318fca1... movement and music
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 7 )
