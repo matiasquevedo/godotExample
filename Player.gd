@@ -18,7 +18,7 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2()  # The player's movement vector.
 	var mouse_position = get_viewport().get_mouse_position()
-	position = mouse_position
+	self.set_position(Vector2(mouse_position.x-3,mouse_position.y-3))
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
 	if velocity.x != 0:
