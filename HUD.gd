@@ -23,7 +23,7 @@ func show_game_over():
 	$Message.show()
 	# Make a one-shot timer and wait for it to finish.
 	yield(get_tree().create_timer(1), "timeout")
-	$StartButton.show()
+	emit_signal("start_game")
 	
 func update_score(score):
 	$ScoreLabel.text = str(score)
