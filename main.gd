@@ -9,6 +9,7 @@ func _ready():
 
 
 func game_over():
+<<<<<<< HEAD
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$Music.stop()
@@ -21,9 +22,28 @@ func new_game():
 	score = 0
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
+<<<<<<< HEAD
 	$HUD.update_score(score)
 	$HUD.show_message("Preparate")
 	$Music.play()
+=======
+=======
+	$Music.stop()
+	$ScoreTimer.stop()
+	$MobTimer.stop()
+	$DeathSound.play()
+	$HUD.show_game_over()
+	get_tree().call_group("mobs", "queue_free")
+
+func new_game():
+	$Music.play()
+	score = 0
+	$Player.start($StartPosition.position)
+	$StartTimer.start()
+	$HUD.update_score(score)
+	$HUD.show_message("Preparate")
+>>>>>>> 318fca1... movement and music
+>>>>>>> f826fb6420e2a860dc28026033c84e918e676cb2
 
 
 
@@ -47,9 +67,19 @@ func _on_MobTimer_timeout():
 
 
 func _on_ScoreTimer_timeout():
+<<<<<<< HEAD
 	print('gana un punto')
 	score += 1
 	$HUD.update_score(score)
+=======
+<<<<<<< HEAD
+	score += 1
+=======
+	print('gana un punto')
+	score += 1
+	$HUD.update_score(score)
+>>>>>>> 318fca1... movement and music
+>>>>>>> f826fb6420e2a860dc28026033c84e918e676cb2
 
 
 func _on_StartTimer_timeout():
